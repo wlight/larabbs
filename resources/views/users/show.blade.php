@@ -7,7 +7,7 @@
                 <div class="panel-body">
                     <div class="media">
                         <div align="center">
-                            <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600" width="300px" height="300px" class="thumbnail img-responsive">
+                            <img src="{{ $user->avatar }}" width="300px" height="300px" class="thumbnail img-responsive">
                         </div>
                         <div class="media-body">
                             <hr>
@@ -26,17 +26,19 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;">{{ $user->name }}  <small>{{ $user->email }}</small></h1>
+                        <h1 class="panel-title pull-left" style="font-size:30px;">{{ $user->name }}
+                            <small>{{ $user->email }}</small></h1>
                     </span>
                 </div>
             </div>
-        </div>
-        <hr>
 
-        {{--用户发布的内容--}}
-        <div class="panel panel-default">
-            <div class="panel-body">
-                暂无数据···
+            <hr>
+
+            {{--用户发布的内容--}}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    暂无数据···
+                </div>
             </div>
         </div>
     </div>
