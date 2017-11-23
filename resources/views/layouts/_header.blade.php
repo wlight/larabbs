@@ -26,7 +26,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="user-avatar pull-left" style="margin-right: 8px; margin-top: -5px;">
-                                <img src="{{ $user->avatar }}" class="img-responsive img-circle" width="30px" height="30px" alt="">
+                                <img src="{{ isset(Auth::user()->avatar)?Auth::user()->avatar:'http://images-1255459023.cosbj.myqcloud.com/1510909378405316.jpg' }}" class="img-responsive img-circle" width="30px" height="30px" alt="">
                             </span>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>

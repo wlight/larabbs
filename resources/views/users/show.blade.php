@@ -7,7 +7,7 @@
                 <div class="panel-body">
                     <div class="media">
                         <div align="center">
-                            <img src="{{ $user->avatar }}" width="300px" height="300px" class="thumbnail img-responsive">
+                            <img src="{{ $user->avatar or 'http://images-1255459023.cosbj.myqcloud.com/1510909378405316.jpg' }}" width="300px" height="300px" class="thumbnail img-responsive">
                         </div>
                         <div class="media-body">
                             <hr>
