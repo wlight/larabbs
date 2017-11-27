@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/simditor.css') }}">
+@stop
 @section('content')
 
     <div class="container">
@@ -48,8 +50,7 @@
                         </div>
 
                         <div class="well well-sm">
-                            <button type="submit" class="btn btn-primary"><span
-                                        class="glyphicon glyphicon-ok" aria-hidden="true"></span>保存
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>保存
                             </button>
                         </div>
                     </form>
@@ -59,3 +60,16 @@
     </div>
 
 @endsection
+@section('scripts')
+    <script src="{{ asset('js/module.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/hotkeys.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/uploader.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/simditor.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var editor = new Simditor({
+                textarea: $('#editor')
+            });
+        });
+    </script>
+@stop
